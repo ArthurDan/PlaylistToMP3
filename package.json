@@ -1,0 +1,9 @@
+{
+  "name": "PlaylistToMP3",
+  "version": "",
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.14.10",
+    "youtube-mp3-downloader": "^0.5.2"
+  }
+}
