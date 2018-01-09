@@ -6,6 +6,13 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>
+    	Vous avez entendu un playlist qui vous plaisait sur Youtube ? Vous souhaitez télécharger tous les morceaux de cette playlist D'UN SEUL COUP ?</br>
+    	Entrez l'URL de la playlist et récupérez tous vos morceaux préférés !
+    </p>
+    <form action="/" method="POST">
+    	<input type="text" name="youtubeURI" placeholder="Place the URL of your YouTube playlist here">
+    	<input type="submit" value="Convertir en MP3">
+    </form>
   </body>
 </html>
