@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'YTPlaylistToMP3' });
 });
 
+router.post('/', function(req, res){
+	console.log(req.body.youtubeURI);
+});
+
 module.exports = router;
