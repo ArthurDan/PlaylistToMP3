@@ -1,11 +1,11 @@
 var fs = require('fs');
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 var downloader = require('./downloader');
 var dl = new downloader;
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
   res.render('index', { title: 'YTPlaylistToMP3' });
 });
 
@@ -20,7 +20,6 @@ router.post('/', function(req, res){
     else{
         console.log("Song "+ i + " was downloaded: " + res.file);
     }
-});
 	res.render('download', { title: 'Downloading...' });
 });
 
