@@ -2,11 +2,13 @@ const google = require('googleapis');
 const youtube = google.youtube('v3');
 const horizon = require('horizon-youtube-mp3');
 
-var list = function(listId, nextPageToken) {
+var downloadPlaylist = function(uri, nextPageToken) {
+	var splitUri = uri.split('=');
+	var playlistId = splitUri[1];
   youtube.playlistItems.list({
     key: 'AIzaSyBhdyqcuYOaQcFqruYM0lnS8xrrkxqN2L4',
     part: 'id, snippet',
-    playlistId: listId,
+    playlistId: playlistId,
     maxResult: 20,
     pageToken: nextPageToken,
   }, (err, results) => {
@@ -29,6 +31,19 @@ var list = function(listId, nextPageToken) {
   });
 }
 
+var downloadVideo = function(uri) {
+	 horizon.downloadToLocal(
+      uri,
+      'D:/Users/Whiteyeas/FreeMusic',
+      null,
+      null,
+      null,
+      onConvertVideoComplete,
+      onConvertVideoProgress
+      );
+    };
+}
+
 function onConvertVideoComplete(err, result) {
   console.log(err, result);
   // Will return...
@@ -43,4 +58,5 @@ function onConvertVideoProgress(percent, timemark, targetSize) {
   // Progress: 100.0083970106642 Timemark: 00:02:34.83 Target Size: 2420
 }
 
-module.exports = list;
+module.exports = downloadPlaylist;
+module.exports = downloadVideo;

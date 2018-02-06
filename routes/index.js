@@ -12,20 +12,16 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'YTPlaylistToMP3' });
 });
 
-//Test bastien lister tous les liens d'une playlist
-router.get('/list_url', function(req, res) {
-  list_url.test(auth, requestData);
-  res.render('index', { title: 'Liste des URL' });
-});
-
 router.post('/', function(req, res){
 	console.log(req.body.youtubeURI);
-	var uri = req.body.youtubeURI;
-	var splitUri = uri.split('=');
-	var videoId = splitUri[1];
-	list(videoId);
-
+	downloadPlaylist(req.body.youtubeURI)
 	res.render('download', { title: 'Downloading...' });
 });
+
+router.post('/video', function(req, res){
+	console.log(req.body.youtubeURI);
+	downloadVideo(req.body.youtubeURI);
+	res.render('download', { title: 'Downloading...' });
+})
 
 module.exports = router;
