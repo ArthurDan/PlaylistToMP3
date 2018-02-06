@@ -27,6 +27,10 @@ Entrez la commande suivante dans le terminal :
 
 ## Comment l'utiliser
 
+Modifiez la valeur a la clé "pathDownload" dans \PlaylistToMP3\routes\config.json qui correspond à la route où sera téléchargé tel que:
+```js
+"pathDownload":"C:/Users/falle/Music/yt2mp3",
+```
 Avec un terminal ou un invité de commandes, placez-vous dans le dossier PlaylistToMP3. Pour le premier lancement tapez la commande
 > npm install</blockquote>
 
