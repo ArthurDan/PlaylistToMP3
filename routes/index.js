@@ -21,7 +21,7 @@ router.post('/playlist', function(req, res){
 router.post('/video', function(req, res){
 	console.log(req.body.youtubeURI);
 	download.downloadVideo(req.body.youtubeURI);
-	res.render('download', { title: 'Downloading...' });
+	res.render('downloadSingle', { title: 'Downloading...' });
 })
 
 module.exports = router;
