@@ -16,8 +16,14 @@ Ajouter à la variable d'environnement Path
 * FFPROBE_PATH tel que %SYSTEM_ROOT%\ffmpeg-3.0-win64-static\bin\ffprobe.exe
 
 **Unix :**
-Installer ffmpeg
+Installer ffmpeg en entrant la commande suivante dans le terminal :
 > apt-get install ffmpeg</blockquote>
+
+**MacOS X:**
+La manière la plus simple d'installer ffmeg sur mac est de passer par le [Homebrew](https://brew.sh/).
+Entrez la commande suivante dans le terminal :
+> brew intall</blockquote>
+
 
 ## Comment l'utiliser
 
