@@ -22,7 +22,7 @@ Installer ffmpeg en entrant la commande suivante dans le terminal :
 **MacOS X:**
 La manière la plus simple d'installer ffmeg sur mac est de passer par le [Homebrew](https://brew.sh/).
 Entrez la commande suivante dans le terminal :
-> brew intall</blockquote>
+> brew intall ffmpeg</blockquote>
 
 
 ## Comment l'utiliser
