@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'YTPlaylistToMP3' });
 });
 
-router.post('/', function(req, res){
+router.post('/playlist', function(req, res){
 	console.log(req.body.youtubeURI);
 	download.downloadPlaylist(req.body.youtubeURI)
 	res.render('download', { title: 'Downloading...' });
