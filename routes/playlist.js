@@ -17,7 +17,7 @@ var downloadPlaylist = function(uri, nextPageToken) {
       console.log(err ? err.message : element.snippet.resourceId.videoId);
       horizon.downloadToLocal(
       "https://www.youtube.com/watch?v=" + element.snippet.resourceId.videoId,
-      'D:/Users/Whiteyeas/FreeMusic',
+      'C:/Users/falle/Music/yt2mp3',
       null,
       null,
       null,
@@ -25,8 +25,9 @@ var downloadPlaylist = function(uri, nextPageToken) {
       onConvertVideoProgress
       );
     });
+    console.log(results.data);
     if (results.data.nextPageToken) {
-      list(listId, results.data.nextPageToken);
+      downloadPlaylist(uri, results.data.nextPageToken);
     }
   });
 }
@@ -34,14 +35,13 @@ var downloadPlaylist = function(uri, nextPageToken) {
 var downloadVideo = function(uri) {
 	 horizon.downloadToLocal(
       uri,
-      'D:/Users/Whiteyeas/FreeMusic',
+      'C:/Users/falle/Music/yt2mp3',
       null,
       null,
       null,
       onConvertVideoComplete,
       onConvertVideoProgress
-      );
-    };
+    );
 }
 
 function onConvertVideoComplete(err, result) {
@@ -58,5 +58,5 @@ function onConvertVideoProgress(percent, timemark, targetSize) {
   // Progress: 100.0083970106642 Timemark: 00:02:34.83 Target Size: 2420
 }
 
-module.exports = downloadPlaylist;
-module.exports = downloadVideo;
+exports.downloadPlaylist = downloadPlaylist;
+exports.downloadVideo = downloadVideo;
