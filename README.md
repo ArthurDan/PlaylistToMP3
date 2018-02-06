@@ -33,5 +33,9 @@ Si vous voulez télécharger une playlist, rentrez l'url dans le champ de gauche
 
 Pour une simple vidéo, rentrez l'url dans le champ de gauche puis clickez sur 
 
-### Get
+### Post
+
+* localhost:4000/playlist : prend en paramètre la variable youtubeUri qui correspond a l'url de la playlist
+
+* localhost:4000/video : prend en paramètre la variable youtubeUri qui correspond a l'url de la playlist
 
