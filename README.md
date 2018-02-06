@@ -29,9 +29,9 @@ Pour lancer l'application, tapez la commande
 
 Ouvrez un navigateur et accédez a l'adresse localhost:4000
 
-Si vous voulez télécharger une playlist, rentrez l'url dans le champ de gauche puis clickez sur
+Si vous voulez télécharger une playlist, rentrez l'url dans le champ de gauche puis cliquez sur le bouton convertir en-dessous
 
-Pour une simple vidéo, rentrez l'url dans le champ de gauche puis clickez sur
+Pour une simple vidéo, rentrez l'url dans le champ de gauche puis cliquez sur le bouton convertir en-dessous
 
 ### Get
 
