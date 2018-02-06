@@ -31,7 +31,11 @@ Ouvrez un navigateur et accédez a l'adresse localhost:4000
 
 Si vous voulez télécharger une playlist, rentrez l'url dans le champ de gauche puis clickez sur
 
-Pour une simple vidéo, rentrez l'url dans le champ de gauche puis clickez sur 
+Pour une simple vidéo, rentrez l'url dans le champ de gauche puis clickez sur
+
+### Get
+
+* localhost:4000/ : correspond à la page d'accueil de l'application 
 
 ### Post
 
