@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  	<head>
-	    <title><%= title %></title>
-	    <link rel='stylesheet' href='/stylesheets/index.css' />
-	  	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+	<head>
+		<meta charset="utf-8">
+		<title>PlayList2MP3</title>
+		<link href="stylesheet/index.css" rel="stylesheet">
+		<link href="stylesheet/bootstrap.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	</head>
 
@@ -11,56 +12,58 @@
 		<div class="container-fluid header">
 			<p>PlayList2MP3</p>
 		</div>
-		<div class="container verticalyCentered">
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-8 textPara">
-					<p>
-			Vous avez entendu un playlist qui vous plaisait sur Youtube ? Vous souhaitez télécharger tous les morceaux de cette playlist D'UN SEUL COUP ?</br>
-			Entrez l'URL de la playlist et récupérez tous vos morceaux préférés !
-					</p>
-				</div>	
+		<div class="container-fluid verticalyCentered">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8 textPara">
+						<p>
+				Vous avez entendu un playlist qui vous plaît sur Youtube ? Vous souhaitez télécharger tous les morceaux de cette playlist D'UN SEUL COUP ?</br>
+				Entrez l'URL de la playlist et récupérez tous vos morceaux préférés !
+						</p>
+					</div>	
+				</div>			
+				<div class="row">
+					<div class="col-md-6">
+						<div class="row labelInput">
+							<div class="col-md-12">
+								Convertissez votre Playlist Youtube!
+							</div>
+						</div>
+						<form action='/' method="POST">
+							<div class="row">
+								<div class="col-md-12">
+									<input class="inputUrl" type="url" id="url" name="youtubeURI" placeholder="Entrez l'url de votre playlist!" >
+								</div>
+							</div>
+							<div class="row btnForm">
+								<div class="col-md-12 labelInput">
+									<input class="btn" type="submit" id="send" value="Convertir">
+								</div>
+							</div>
+						</form>					
+					</div>
+					<div class="col-md-6">
+						<div class="row labelInput">
+							<div class="col-md-12">
+								Convertissez votre Video Youtube!
+							</div>
+						</div>
+						<form action='/video' method="POST">
+							<div class="row">
+								<div class="col-md-12">
+									<input class="inputUrl" type="url" id="url" name="youtubeURI" placeholder="Entrez l'url de votre vidéo!" >
+								</div>
+							</div>
+							<div class="row btnForm">
+								<div class="col-md-12 labelInput">
+									<input class="btn" type="submit" id="send" value="Convertir">
+								</div>
+							</div>
+						</form>					
+					</div>
+				</div>						
 			</div>			
-			<div class="row">
-				<div class="col-md-6">
-					<div class="row labelInput">
-						<div class="col-md-12">
-							Convertissez votre Playlist Youtube!
-						</div>
-					</div>
-					<form action='/' method="POST">
-						<div class="row">
-							<div class="col-md-12">
-								<input class="inputUrl" type="url" id="url" name="youtubeURI" placeholder="Entrez l'url de votre playlist!" >
-							</div>
-						</div>
-						<div class="row btnForm">
-							<div class="col-md-12 labelInput">
-								<input class="btn" type="button" id="send" value="Convertir">
-							</div>
-						</div>
-					</form>					
-				</div>
-				<div class="col-md-6">
-					<div class="row labelInput">
-						<div class="col-md-12">
-							Convertissez votre Video Youtube!
-						</div>
-					</div>
-					<form action='/video' method="POST">
-						<div class="row">
-							<div class="col-md-12">
-								<input class="inputUrl" type="url" id="url" name="youtubeURI" placeholder="Entrez l'url de votre vidéo!" >
-							</div>
-						</div>
-						<div class="row btnForm">
-							<div class="col-md-12 labelInput">
-								<input class="btn" type="button" id="send" value="Convertir">
-							</div>
-						</div>
-					</form>					
-				</div>
-			</div>						
-		</div>
+		</div>		
 	</body>
 </html>

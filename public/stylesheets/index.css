@@ -57,9 +57,8 @@ body{
 }
 
 .verticalyCentered{
-	margin-top: 30vh; /* poussé de la moitié de hauteur de viewport */
-  	transform: translateY(-50%);
 	background-color: darkgray;
+	margin-top: 80px; 
 	
 }
 
