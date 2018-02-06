@@ -2,10 +2,10 @@ const google = require('googleapis');
 const youtube = google.youtube('v3');
 const horizon = require('horizon-youtube-mp3');
 
-var downloadPlaylist = function(uri, nextPageToken) {
+var downloadPlaylist = function(uri, nextPageToken) { // télécharge toutes les vidéos de la playlist
 	var splitUri = uri.split('=');
-	var playlistId = splitUri[1];
-  youtube.playlistItems.list({
+	var playlistId = splitUri[1];  // récupère l'id de l'url
+  youtube.playlistItems.list({  //récurèpe tout les les élèments de la playlist
     key: 'AIzaSyBhdyqcuYOaQcFqruYM0lnS8xrrkxqN2L4',
     part: 'id, snippet',
     playlistId: playlistId,
@@ -14,8 +14,8 @@ var downloadPlaylist = function(uri, nextPageToken) {
   }, (err, results) => {
     //console.log(err ? err.message : results.data);
     results.data.items.forEach(function(element){
-      console.log(err ? err.message : element.snippet.resourceId.videoId);
-      horizon.downloadToLocal(
+      //console.log(err ? err.message : element.snippet.resourceId.videoId);
+      horizon.downloadToLocal(  //télécharge une vidéo sous format mp3
       "https://www.youtube.com/watch?v=" + element.snippet.resourceId.videoId,
       'C:/Users/falle/Music/yt2mp3',
       null,
@@ -25,14 +25,13 @@ var downloadPlaylist = function(uri, nextPageToken) {
       onConvertVideoProgress
       );
     });
-    console.log(results.data);
-    if (results.data.nextPageToken) {
+    if (results.data.nextPageToken) {   // si il y a d'autres éléments sur la liste suivante
       downloadPlaylist(uri, results.data.nextPageToken);
     }
   });
 }
 
-var downloadVideo = function(uri) {
+var downloadVideo = function(uri) {   // télécharge une vidéo sous format mp3 avec une url
 	 horizon.downloadToLocal(
       uri,
       'C:/Users/falle/Music/yt2mp3',
